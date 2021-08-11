@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="wIdth=device-wIdth, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script defer src="../dist/index.js"></script>
+    <title>Index</title>
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <form>
+      <% if(typeof error !== "undefined") { %>
+      <h2 style="color: red"><%= error %></h3>
+      <% } %>
+      <p>
+        Join Game <input id="joinId" style="margin-left: 5px" type="text" />
+        <input
+          type="button"
+          style="margin-left: 15px"
+          onclick="joinGame()"
+          value="Join Game"
+        />
+        <span
+          Id="error"
+          style="display: block; font-size: 2rem; font-weight: bolder"
+        >
+        </span>
+      </p>
+      <p>
+        <input
+          type="button"
+          style="display: block"
+          Id="createRoom"
+          onclick="createGame()"
+          value="Create Game"
+        />
+      </p>
+    </form>
+  </body>
+</html>

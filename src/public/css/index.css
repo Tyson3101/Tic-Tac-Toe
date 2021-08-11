@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: lightblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  gap: 2rem;
+}
+form {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+h1 {
+  font-size: 6em;
+}
+
+form > p:first-child {
+  font-size: 1.5em;
+}
+
+input[type="button"] {
+  padding: 1.1rem;
+  background-color: rgb(169, 213, 218);
+  cursor: pointer;
+  border: 1px double black;
+}
+
+input[type="text"] {
+  padding: 1rem;
+  font-size: large;
+  outline: none;
+  background: whitesmoke;
+  border: 2px solid black;
+}

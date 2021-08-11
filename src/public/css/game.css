@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: lightblue;
+}
+
+body {
+  display: grid;
+  margin-top: 4vh;
+  gap: 0;
+  place-items: center;
+}
+
+.game {
+  display: grid;
+  gap: 0;
+  grid-template-areas:
+    "top"
+    "middle"
+    "bottom";
+  place-items: center;
+}
+
+.top {
+  grid-area: top;
+  border-bottom: 2px black solid;
+}
+.middle {
+  grid-area: middle;
+  border-bottom: 2px black solid;
+  border-top: 2px black solid;
+}
+.bottom {
+  grid-area: bottom;
+  border-top: 2px black solid;
+}
+
+.top div,
+.middle div,
+.bottom div {
+  cursor: pointer;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  outline: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 200px;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.square0 {
+  border-right: 2px black solid;
+}
+
+.square1 {
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+}
+
+.square2 {
+  border-left: 2px black solid;
+}
+
+.square3 {
+  border-right: 2px black solid;
+}
+
+.square4 {
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+}
+
+.square5 {
+  border-left: 2px black solid;
+}
+
+.square6 {
+  border-right: 2px black solid;
+}
+
+.square7 {
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+}
+
+.square8 {
+  border-left: 2px black solid;
+}
