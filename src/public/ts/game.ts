@@ -241,7 +241,11 @@ function updateSquares() {
 function clicked(postion: number) {
   return (e: Event) => {
     e.preventDefault();
-    if (me.turn || squares[postion].player != null) {
+    if (
+      me.turn &&
+      squares[postion].player !== "X" &&
+      squares[postion].player !== "0"
+    ) {
       socket.emit("chosenSquare", roomId, me.id, postion);
     }
   };

@@ -1,7 +1,7 @@
 import { createServer } from "http";
 import { Server, Socket } from "socket.io";
 import express from "express";
-import { v4 as uuidV4 } from "uuId";
+import { v4 as uuidV4 } from "uuid";
 const app = express();
 const http = createServer(app);
 const io = new Server(http);
@@ -22,11 +22,7 @@ app.get("/", (_, res) => {
 app.get("/:roomId", (req, res) => {
   const { roomId } = req.params;
   if (rooms[roomId]) {
-    if (rooms[roomId].players.length < 2) {
-      res.render("game");
-    } else {
-      res.render("index", { error: "Game Full" });
-    }
+    res.render("game");
   } else {
     res.render("index", { error: "Game not found" });
   }
@@ -101,4 +97,4 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(3000, () => console.log("http://localhost:3000"));
+http.listen(PORT, () => console.log("http://localhost:3000"));
