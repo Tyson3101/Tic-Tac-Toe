@@ -24,7 +24,7 @@ async function joinGame(e: Event) {
 document.querySelector("#createRoom")?.addEventListener("click", createGame);
 
 async function createGame(e: Event) {
-  e.preventDefault();
+  e?.preventDefault();
   try {
     const options = {
       method: "POST",
