@@ -22,7 +22,11 @@ app.get("/", (_, res) => {
 app.get("/:roomId", (req, res) => {
   const { roomId } = req.params;
   if (rooms[roomId]) {
-    res.render("game");
+    if (rooms[roomId].players.length < 2) {
+      res.render("game");
+    } else {
+      res.render("index", { error: "Game Full" });
+    }
   } else {
     res.render("index", { error: "Game not found" });
   }
